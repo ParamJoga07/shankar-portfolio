@@ -8,13 +8,14 @@
     <title>Document</title>
     <link rel="script" href="app.js">
     <style>
+        
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        div.mobile {}
+
 
         body {
             width: 100%;
@@ -22,8 +23,8 @@
             display: block;
             margin: auto;
             min-height: 100vh;
-            background: #191919;
-            font-family: sans-serif;
+            background: #000000;
+            font-family: 'Times New Roman', Times, serif;
         }
 
         .navbar {
@@ -108,7 +109,7 @@
         .project-section {
             width: 100%;
             min-height: 100vh;
-            padding: 150px 100px 100px;
+            padding: 100px 100px 100px;
             position: fixed;
             top: 0;
             transition: 1s;
@@ -127,16 +128,21 @@
             -webkit-text-stroke: 8px transparent;
         }
 
+        .project-table {
+            display: table-row;
+            width: 100%;
+
+        }
+
         .project-container {
-            display: grid;
+            display: table-cell;
             grid-template-columns: repeat(2, 1fr);
-            grid-gap: 100px;
         }
 
         .project-card {
             height: 400px;
             position: relative;
-            display: inline-block;
+            display: table-cell;
         }
 
         .project-img {
@@ -201,12 +207,15 @@
         .project-card:hover .project-content {
             opacity: 1;
         }
+        .project-pro{
+            margin-left: 10px;
+        }
 
         /* about-section */
 
         .about-section {
             width: 100%;
-            min-height: 100vh;
+            min-height: 50vh;
             padding: 150px 100px 0;
             position: fixed;
             top: 0;
@@ -250,8 +259,9 @@
             font-size: 16px;
             text-transform: capitalize;
             cursor: pointer;
+            border-radius: 20px;
             transition: .5s;
-            background: rgba(0, 0, 0, 0.5);
+            background: rgba(64, 64, 64, 0.615);
         }
 
         .download-cv-btn:hover {
@@ -268,10 +278,22 @@
         .heading {
             text-align: center;
             font-size: 60px;
-            color: #fff;
+            color: rgba(255, 255, 255, 0.581);
             text-transform: capitalize;
-            font-weight: 300;
-            margin-bottom: 100px;
+            font-weight: 800;
+            margin-bottom: 50px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .sub{
+            margin-top: 20px;
+            margin-left: 30px;
+            text-align: left;
+            font-size: 40px;
+            color: rgba(255, 255, 255, 0.561);
+            text-transform: capitalize;
+            font-weight: 800;
+            margin-bottom: 20px;
+            font-family: 'Times New Roman', Times, serif;
         }
 
         .skills-container {
@@ -280,6 +302,7 @@
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             grid-gap: 100px;
+            
             color: #fff;
         }
 
@@ -294,11 +317,13 @@
         }
 
         .skill-name {
+            color: #bab9b9;
             font-size: 30px;
-            font-weight: 300;
+            font-weight: 700;
             text-align: center;
             text-transform: capitalize;
             margin: 30px 0 20px;
+            font-family: 'Times New Roman', Times, serif;
         }
 
         .skill-info {
@@ -379,7 +404,7 @@
             display: block;
             margin: -80px 0;
             position: relative;
-            background: #f00;
+            background: rgb(255, 0, 0);
         }
 
         .card:nth-child(even) {
@@ -543,6 +568,9 @@
             height: 100%;
             border-radius: 5px;
         }
+
+
+        
     </style>
 </head>
 
@@ -551,25 +579,64 @@
     <nav class="navbar">
         <ul class="link-group">
             <li class="link active"><a href="#">home</a></li>
-            <li class="link"><a href="#">projects</a></li>
-            <li class="link"><a href="#">about</a></li>
-            <li class="link"><a href="#">skills</a></li>
-            <li class="link"><a href="#">contact</a></li>
+            <li class="link active"><a href="#">projects</a></li>
+            <li class="link active"><a href="#">about</a></li>
+            <li class="link active"><a href="#">skills</a></li>
+            <li class="link active"><a href="#">contact</a></li>
         </ul>
     </nav>
     <!-- home section -->
 
     <section class="home-section active">
         <h1 class="hero-heading">hello, i am <br> SANKAR DHYANESH</h1>
-        <img src="./pic.jpg" class="home-img" alt="">
+        <img src="https://wallpaperaccess.com/full/342303.png" class="home-img" alt="">
     </section>
     <!-- project section -->
     <section class="project-section active">
         <h1 class="project-heading">some of my projects</h1>
-        <div class="flexbox">
+        <div class="project-pro">
+            <div class="project-table">
+                <div class="project-container">
+                    <div class="project-card">
+                        <img src="images/40a3f42733768025ff09c25c74ddb5bd.jpg" class="project-img" alt="">
+                        <div class="project-content">
+                            <h1 class="project-title">project 01</h1>
+                            <p class="project-info">
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit vitae delectus cumque
+                                repudiandae aliquam optio accusamus natus nobis! Nam, sunt?
+                            </p>
+                            <div class="project-btn-grp">
+                                <a
+                                    href="https://embed-google-maps.com/?gclid=Cj0KCQjwqoibBhDUARIsAH2OpWg5uoaZpDLeLUIPFP3Cl-BuOB3RkZ-WJkQFcw_yzRd2PRLD7PNjkSwaAkkLEALw_wcB#iframe-code-generator"><button
+                                        class="project-btn github">More info ℹ️</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div><br>
+                <div class="project-container">
+                    <div class="project-card">
+                        <img src="images/50651e95ae192df7dddf0ddc8e92a284.jpg" class="project-img" alt="">
+                        <div class="project-content">
+                            <h1 class="project-title">project 02</h1>
+                            <p class="project-info">
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit vitae delectus cumque
+                                repudiandae aliquam optio accusamus natus nobis! Nam, sunt?
+                            </p>
+                            <div class="project-btn-grp">
+                                <a href="./project.html"><button class="project-btn github">More info ℹ️</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div><br><br>
+        <!--------------project 03 and 04 ------------------>
+        <div class="project-table">
             <div class="project-container">
                 <div class="project-card">
-                    <img src="img/project-1.png" class="project-img" alt="">
+                    <img src="images/40a3f42733768025ff09c25c74ddb5bd.jpg" class="project-img" alt="">
                     <div class="project-content">
                         <h1 class="project-title">project 01</h1>
                         <p class="project-info">
@@ -577,16 +644,16 @@
                             repudiandae aliquam optio accusamus natus nobis! Nam, sunt?
                         </p>
                         <div class="project-btn-grp">
-                            <center><a
-                                    href="https://embed-google-maps.com/?gclid=Cj0KCQjwqoibBhDUARIsAH2OpWg5uoaZpDLeLUIPFP3Cl-BuOB3RkZ-WJkQFcw_yzRd2PRLD7PNjkSwaAkkLEALw_wcB#iframe-code-generator"><button
-                                        class="project-btn github">More info ℹ️</button></a></center>
+                            <a
+                                href="https://embed-google-maps.com/?gclid=Cj0KCQjwqoibBhDUARIsAH2OpWg5uoaZpDLeLUIPFP3Cl-BuOB3RkZ-WJkQFcw_yzRd2PRLD7PNjkSwaAkkLEALw_wcB#iframe-code-generator"><button
+                                    class="project-btn github">More info ℹ️</button></a>
                         </div>
                     </div>
                 </div>
             </div><br>
             <div class="project-container">
                 <div class="project-card">
-                    <img src="img/project-1.png" class="project-img" alt="">
+                    <img src="images/project-planning-header@2x.png" class="project-img" alt="">
                     <div class="project-content">
                         <h1 class="project-title">project 02</h1>
                         <p class="project-info">
@@ -601,6 +668,7 @@
             </div>
         </div>
         </div>
+        </div>
     </section>
 
 
@@ -610,63 +678,105 @@
         <div class="about">
             <div class="about-img-container">
                 <img src="img/home.png" class="about-img" alt="">
-                <button class="download-cv-btn">downlaod cv</button>
+                <a href="./FINAL PORTFOLIO 1.pdf"><button class="download-cv-btn">Downlaod Portfolio</button></a>
             </div>
-            <p class="about-info">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto sequi recusandae
-                laborum ipsam dignissimos nostrum vitae provident officia, consectetur ab accusantium corrupti
-                exercitationem temporibus repellat non magni cupiditate ea reprehenderit.</p>
+            <p class="about-info">HELLO,
+                I am an Architectucture student. I have a passion for learning and sharing knowledge with my people. I strive to create an environment where people can learn, grow, and be themselves.
+                I am patient and kind, and believe everyone has something to offer. Have a lot of interests, but some of my favorites include photography spending time outdoors, playing sports, and spending time with friends and family. 
+                I also enjoy learning new things, researching, and exploring new.</p>
 
         </div>
     </section>
 
     <!-- skills -->
     <div class="skill-section active">
-        <h1 class="heading">skills</h1>
+        <h1 class="heading">SKILLS</h1>
+        <h1 class="sub">DRAFTING</h1>
         <div class="skills-container">
             <div class="skill-card">
-                <img src="img/html.png" class="skill-img" alt="">
+                <img src="images/autocad-removebg-preview-removebg-preview.png" class="skill-img" alt="">
                 <div class="skill-level">98%</div>
-                <h1 class="skill-name">HTML</h1>
-                <p class="skill-info">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur, delectus!
-                </p>
+                <h1 class="skill-name">AUTOCAD</h1>
+                
             </div>
             <div class="skill-card">
-                <img src="img/html.png" class="skill-img" alt="">
+                <img src="images/image-removebg-preview 11.08.22 AM.png" class="skill-img" alt="">
                 <div class="skill-level">98%</div>
-                <h1 class="skill-name">HTML</h1>
-                <p class="skill-info">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur, delectus!
-                </p>
+                <h1 class="skill-name">ARCHICAD</h1>
+                
             </div>
             <div class="skill-card">
-                <img src="img/html.png" class="skill-img" alt="">
+                <img src="images/bricsys-logo-ESAin-software-copia.png" class="skill-img" alt="">
                 <div class="skill-level">98%</div>
-                <h1 class="skill-name">HTML</h1>
-                <p class="skill-info">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur, delectus!
-                </p>
+                <h1 class="skill-name">BRICSCAD</h1>
+                
+            </div>
+            </div>
+            <h1 class="sub">BIM & 3D</h1>
+            <div class="skills-container">
+            <div class="skill-card">
+                <img src="images/revit-removebg-preview.png" class="skill-img" alt="">
+                <div class="skill-level">98%</div>
+                <h1 class="skill-name">REVIT</h1>
+                
             </div>
             <div class="skill-card">
-                <img src="img/html.png" class="skill-img" alt="">
+                <img src="images/image-removebg-preview 11.10.53 AM.png" class="skill-img" alt="">
                 <div class="skill-level">98%</div>
-                <h1 class="skill-name">HTML</h1>
-                <p class="skill-info">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur, delectus!
-                </p>
+                <h1 class="skill-name">SKETCH-UP</h1>
+                
             </div>
             <div class="skill-card">
-                <img src="img/html.png" class="skill-img" alt="">
+                <img src="images/image-removebg-preview 11.17.33 AM.png" class="skill-img" alt="">
                 <div class="skill-level">98%</div>
-                <h1 class="skill-name">HTML</h1>
-                <p class="skill-info">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur, delectus!
-                </p>
-            </div>
-            <div class="skill-card">
-                <img src="img/html.png" class="skill-img" alt="">
-                <div class="skill-level">98%</div>
-                <h1 class="skill-name">HTML</h1>
-                <p class="skill-info">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur, delectus!
-                </p>
+                <h1 class="skill-name">RHINO</h1>
+                
             </div>
 
         </div>
+        <h1 class="sub">RENDERING</h1>
+        <div class="skills-container">
+        <div class="skill-card">
+            <img src="images/enscape-removebg-preview.png" class="skill-img" alt="">
+            <div class="skill-level">98%</div>
+            <h1 class="skill-name">ENSCAPE</h1>
+            
+        </div>
+        <div class="skill-card">
+            <img src="images/image-removebg-preview 11.18.56 AM.png" class="skill-img" alt="">
+            <div class="skill-level">98%</div>
+            <h1 class="skill-name">LUMION</h1>
+            
+        </div>
+        <div class="skill-card">
+            <img src="images/image-removebg-preview 11.22.12 AM.png" class="skill-img" alt="">
+            <div class="skill-level">90%</div>
+            <h1 class="skill-name">TWINMOTION</h1>
+            
+        </div>
+    </div>
+    <h1 class="sub">POST-PRODUCTION</h1>
+    <div class="skills-container">
+    <div class="skill-card">
+        <img src="images/586d7ac125738d9f2d793e92.png" class="skill-img" alt="">
+        <div class="skill-level">98%</div>
+        <h1 class="skill-name">PHOTOSHOP</h1>
+        
+    </div>
+    <div class="skill-card">
+        <img src="images/image-removebg-preview 11.24.27 AM.png" class="skill-img" alt="">
+        <div class="skill-level">98%</div>
+        <h1 class="skill-name">INDESIGN</h1>
+        
+    </div>
+    <div class="skill-card">
+        <img src="images/image-removebg-preview 11.31.14 PM.png" class="skill-img" alt="">
+        <div class="skill-level">98%</div>
+        <h1 class="skill-name">ILLUSTRATOR</h1>
+        
+    </div>
+
+</div>
     </div>
 
     <!-- timeline -->
@@ -702,11 +812,11 @@
     <!-- contact section -->
     <section class="contact-section active">
         <div class="d-flex">
-            <<h4>Sankar Dhyanesh</h4><br>
-                <h4>Mobile Number: <div class=" font-size:20px">9000313489</div>
-                </h4><br>
-                <h4>Email Id: <div class="font-size:20px">shankardhyanesh852@gmail.com</div>
-                </h4><br>
+            <h4>Sankar Dhyanesh</h4><br>
+            <h4>Mobile Number: <div class=" font-size:20px">9000313489</div>
+            </h4><br>
+            <h4>Email Id: <div class="font-size:20px">shankardhyanesh852@gmail.com</div>
+            </h4><br>
         </div>
         <!-- map -->
         <div class="mapouter">
